@@ -1,0 +1,505 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    background-color: #f5f3f3
+}
+h1 {
+    text-align: center;
+}
+h2 {
+    font-size: 3rem;
+}
+h4 {
+    font-size: 16px;
+    font-weight: 700;
+}
+header {
+    padding: 20px 0 0 0;
+    background: white;
+    text-align: center;
+}
+@media (min-width: 750px) {
+    header {
+        text-align: left;
+    }
+}
+.borrar-curso {
+    background-color: red;
+    border-radius: 50%;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+ul {
+    list-style: none;
+}
+#hero {
+    background-image:url(../img/hero.jpg);
+    height: 350px;
+    background-size: cover;
+}
+#encabezado {
+    margin: 30px 0;
+}
+.submenu {
+    position: relative;
+}
+
+.submenu #carrito{
+    display: none;
+}
+.submenu:hover #carrito{
+    display: block;
+    position: absolute;
+    right:0;
+
+    top:100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 300px;
+}
+.vacio {
+    padding: 10px;
+    background-color: crimson;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+.contenido-hero {
+    margin-top: 80px;
+    color: white;
+}
+.contenido-hero form {
+    position: relative;
+    margin-bottom: 0;
+}
+.contenido-hero form #buscador {
+    height: 50px;
+    margin-bottom: 0;
+}
+.contenido-hero form .submit-buscador {
+    position: absolute;
+    right:0;
+    top:0;
+    height: 100%;
+    padding: 0;
+    display: block;
+    text-indent: -9999px;
+    width: 50px;
+    background-image: url(../img/lupa.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    border:none;
+}
+
+.barra {
+    padding: 20px 0;
+    background: rgb(245,174,213);  /* fallback for old browsers */
+    background: linear-gradient(90deg, rgba(245,174,213,1) 0%, rgba(233,52,86,1) 0%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#741d51', endColorstr='#e44e52',GradientType=1 ); /* IE6-9 */
+}
+
+.barra p {
+    margin:0;
+    color: white;
+}
+.icono {
+    background-repeat: no-repeat;
+    background-position: left center;
+    padding-left: 60px;
+    background-size: 30px;
+    margin-bottom: 40px;
+    text-align: center;
+}
+@media (min-width: 750px) {
+    .icono {
+        margin-bottom:0;
+    }
+}
+.icono1 {
+    background-image: url(../img/icono1.png);
+}
+.icono2 {
+    background-image: url(../img/icono2.png);
+}
+.icono3 {
+    background-image: url(../img/icono3.png);
+}
+
+#lista-cursos .row {
+    margin-bottom:20px;
+}
+.agregar-carrito {
+    margin:10px 0;
+}
+
+.card {
+    text-align: center;
+    border: 1px solid #e1e1e1;
+    background: white;
+}
+@media (min-width: 550px) {
+    .card {
+        text-align: left;
+    }
+}
+.info-card  {
+    padding: 10px 20px;
+}
+
+.info-card p, 
+.card h4 {
+    margin-bottom: 5px;
+}
+.info-card .precio {
+    text-decoration: line-through;
+    font-size: 18px;
+    margin-top: 10px;
+}
+.info-card .precio span {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+
+.footer {
+    margin-top: 40px;
+    border-top:1px solid #aaa;;
+    padding-top: 40px;   
+}
+.footer .menu a{
+display: block;
+margin-bottom: 10px;
+text-decoration: none;
+}
+
+/* ========================================
+   MEJORAS IMPLEMENTADAS - ESTILOS NUEVOS
+   ======================================== */
+
+/* 1. BADGE CONTADOR DEL CARRITO */
+.carrito-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: linear-gradient(135deg, #e93456 0%, #c91f3d 100%);
+    color: white;
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 12px;
+    box-shadow: 0 2px 8px rgba(233, 52, 86, 0.4);
+    animation: aparecer 0.3s ease-in;
+}
+
+.pulse-animation {
+    animation: pulse 0.3s ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.3); }
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 2. TOTAL DEL CARRITO */
+.total-carrito {
+    background: linear-gradient(135deg, #f5aed5 0%, #e93456 100%);
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0 10px 0;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(233, 52, 86, 0.2);
+}
+
+.total-carrito strong {
+    font-size: 20px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.total-carrito .subtotal {
+    font-size: 14px;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* 3. NOTIFICACIONES TOAST */
+.toast-notification {
+    position: fixed;
+    top: 20px;
+    right: -400px;
+    background: white;
+    color: #333;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 9999;
+    transition: right 0.3s ease-in-out;
+    min-width: 280px;
+    max-width: 400px;
+    border-left: 4px solid #333;
+}
+
+.toast-notification.show {
+    right: 20px;
+}
+
+.toast-notification.success {
+    border-left-color: #28a745;
+}
+
+.toast-notification.success .toast-icon {
+    color: #28a745;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.toast-notification.warning {
+    border-left-color: #ffc107;
+}
+
+.toast-notification.warning .toast-icon {
+    color: #ffc107;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.toast-notification.error {
+    border-left-color: #dc3545;
+}
+
+.toast-notification.error .toast-icon {
+    color: #dc3545;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.toast-notification.info {
+    border-left-color: #17a2b8;
+}
+
+.toast-notification.info .toast-icon {
+    color: #17a2b8;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.toast-message {
+    font-size: 14px;
+}
+
+/* 4. ANIMACIÓN DE BOTÓN AL HACER CLIC */
+.btn-clicked {
+    animation: btnClick 0.3s ease;
+}
+
+@keyframes btnClick {
+    0% { transform: scale(1); }
+    50% { transform: scale(0.95); }
+    100% { transform: scale(1); }
+}
+
+/* 5. MENSAJE SIN RESULTADOS DE BÚSQUEDA */
+.mensaje-sin-resultados {
+    text-align: center;
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.mensaje-sin-resultados p {
+    font-size: 18px;
+    color: #666;
+    margin: 0;
+}
+
+/* 6. ANIMACIÓN DE APARICIÓN DE CURSOS */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 7. BOTÓN DE MODO OSCURO */
+.dark-mode-toggle {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(135deg, #f5aed5 0%, #e93456 100%);
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 28px;
+    cursor: pointer;
+    box-shadow: 0 4px 20px rgba(233, 52, 86, 0.4);
+    transition: all 0.3s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dark-mode-toggle:hover {
+    transform: scale(1.1) rotate(20deg);
+    box-shadow: 0 6px 25px rgba(233, 52, 86, 0.6);
+}
+
+.dark-mode-toggle:active {
+    transform: scale(0.95);
+}
+
+/* 8. ESTILOS PARA MODO OSCURO */
+body.dark-mode {
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode header,
+body.dark-mode .card,
+body.dark-mode .submenu #carrito {
+    background-color: #2d2d2d;
+    color: #e0e0e0;
+}
+
+body.dark-mode .card {
+    border-color: #444;
+}
+
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h4,
+body.dark-mode p {
+    color: #e0e0e0;
+}
+
+body.dark-mode .info-card p {
+    color: #b0b0b0;
+}
+
+body.dark-mode .footer {
+    border-top-color: #444;
+}
+
+body.dark-mode .footer .menu a {
+    color: #e0e0e0;
+}
+
+body.dark-mode #lista-carrito {
+    color: #e0e0e0;
+}
+
+body.dark-mode #lista-carrito thead {
+    background-color: #1a1a1a;
+}
+
+body.dark-mode .toast-notification {
+    background: #2d2d2d;
+    color: #e0e0e0;
+}
+
+body.dark-mode .mensaje-sin-resultados {
+    background: #2d2d2d;
+    color: #b0b0b0;
+}
+
+body.dark-mode input[type="text"] {
+    background-color: #3d3d3d;
+    color: #e0e0e0;
+    border-color: #555;
+}
+
+body.dark-mode input[type="text"]::placeholder {
+    color: #888;
+}
+
+/* Mejoras en responsividad para móviles */
+@media (max-width: 750px) {
+    .toast-notification {
+        min-width: 250px;
+        right: -350px;
+        top: 10px;
+    }
+    
+    .toast-notification.show {
+        right: 10px;
+    }
+    
+    .dark-mode-toggle {
+        width: 50px;
+        height: 50px;
+        font-size: 24px;
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    .carrito-badge {
+        width: 22px;
+        height: 22px;
+        font-size: 11px;
+    }
+}
+
+/* Mejora visual del buscador */
+.contenido-hero form #buscador:focus {
+    outline: none;
+    border: 2px solid #e93456;
+    box-shadow: 0 0 10px rgba(233, 52, 86, 0.3);
+}
+
+/* Hover mejorado en las tarjetas */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .card:hover {
+    box-shadow: 0 8px 20px rgba(233, 52, 86, 0.3);
+}
+
+/* Mejorar botón de agregar al carrito */
+.agregar-carrito {
+    transition: all 0.3s ease;
+}
+
+.agregar-carrito:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(233, 52, 86, 0.3);
+}
+
