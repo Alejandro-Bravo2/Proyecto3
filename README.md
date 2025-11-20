@@ -351,17 +351,3 @@ Todas las mejoras implementadas utilizan conocimientos adquiridos en el módulo 
 ## 📄 Licencia
 
 Este proyecto es con fines educativos. Libre uso para aprendizaje.
-
----
-
-## 🙏 Agradecimientos
-
-- IES Rafael Alberti - Centro Educativo
-- Skeleton CSS - Framework base
-- Profesores del módulo de Desarrollo Web
-
----
-
-**¡Proyecto listo para evaluación! ✨**
-
-Si tienes preguntas o sugerencias, no dudes en contactar.
