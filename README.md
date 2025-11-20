@@ -345,9 +345,3 @@ Todas las mejoras implementadas utilizan conocimientos adquiridos en el módulo 
 - **Vanilla JS vs Framework**: Se mantuvo JavaScript puro para cumplir requisitos
 - **CSS personalizado vs Librería**: Se extendió Skeleton con estilos custom para mantener control
 - **Notificaciones propias vs Librería**: Se implementaron desde cero para aprendizaje y personalización
-
----
-
-## 📄 Licencia
-
-Este proyecto es con fines educativos. Libre uso para aprendizaje.
